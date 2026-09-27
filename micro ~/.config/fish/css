@@ -1,0 +1,318 @@
+* {
+
+
+
+    font-family: "Poppins", "Symbols Nerd Font Mono", sans-serif;
+
+
+
+    font-size: 14px;
+
+
+
+    font-weight: 500;
+
+
+
+    border: none;
+
+
+
+    border-radius: 0;
+
+
+
+    min-height: 0;
+
+
+
+    padding: 0;
+
+
+
+    margin: 0;
+
+
+
+}
+
+
+
+
+
+
+
+window#waybar {
+
+
+
+    background: transparent;
+
+
+
+    color: #ffffff;
+
+
+
+}
+
+
+
+#clock,
+#workspaces,
+#backlight {
+
+    font-family: "JetBrains Mono", "Poppins", sans-serif;
+
+    font-weight: 700;
+
+    text-shadow: 0 0 0.5px #ffffff, 0 0 0.5px #ffffff;
+
+}
+
+
+
+
+
+
+
+
+
+/* Global Pill Styling — black smooth pills, white text */
+
+
+
+.modules-left > widget > *,
+
+
+
+.modules-center > widget > *,
+
+
+
+.modules-right > widget > * {
+
+
+
+    background: rgba(15, 15, 15, 0.92);
+
+
+
+    color: #ffffff;
+
+
+
+    border-radius: 999px;
+
+
+
+    padding: 0px 15px;
+
+
+
+    margin: 2px 5px;
+
+
+
+}
+
+
+
+
+
+
+
+.modules-left > widget > *:hover,
+
+
+
+.modules-right > widget > *:hover {
+
+
+
+    background: rgba(30, 30, 30, 0.95);
+
+
+
+}
+
+
+
+
+
+
+
+/* Launcher Specifics */
+
+
+
+#custom-launcher {
+
+
+
+    font-size: 15px;
+
+
+
+    padding: 1px 15px;
+
+
+
+}
+
+
+
+
+
+
+
+/* Workspaces Container — black smooth */
+
+
+
+#workspaces {
+
+
+
+    background: rgba(15, 15, 15, 0.92);
+
+
+
+    border-radius: 9999px;
+
+
+
+    padding: 2px 3px;
+
+
+
+    margin: 2px 3px;
+
+
+
+}
+
+
+
+
+
+
+
+/* Inactive Workspace Buttons */
+#workspaces button {
+    background: transparent;
+    color: #9a9a9a;
+    border-radius: 9999px;
+    padding: 0 8px;
+    min-width: 20px;
+    min-height: 16px;
+    font-family: "JetBrains Mono", "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 900;   /* bump to 700 for "same as clock", 900 for bolder */
+    margin: 0 1px;
+    transition: all 0.12s ease-out;
+}
+
+
+
+
+
+
+
+/* ACTIVE WORKSPACE BUTTON — white pill, black text */
+
+
+
+#workspaces button.focused,
+
+
+
+#workspaces button.active {
+
+
+
+    background: #f5f5f5;
+
+
+
+    color: #111111;
+
+
+
+    padding: 0 14px;
+
+
+
+    min-width: 28px;
+
+
+
+}
+
+
+
+
+
+
+
+#workspaces button:hover:not(.focused):not(.active) {
+
+
+
+    background: rgba(255, 255, 255, 0.1);
+
+
+
+    color: #ffffff;
+
+
+
+}
+
+
+
+
+
+
+
+/* Individual Module Overrides */
+
+
+
+#mpris     { color: #dddddd; }
+
+
+
+#clock     { font-weight: 600; letter-spacing: 0.02em; }
+
+
+
+#network   { color: #ffffff; }
+
+
+
+
+
+
+
+/* Battery & Volume Modules */
+
+
+
+#pulseaudio, #battery { color: #cccccc; }
+#custom-brightness { color: rgb(221, 221, 221); }
+
+
+#pulseaudio.muted     { color: #666666; }
+
+
+
+
+
+
+
+#battery.discharging.warning  { color: #f0a500; }
+
+
+
+#battery.discharging.critical { color: #e05c5c; } 

@@ -1,0 +1,12 @@
+[main]
+font=JetBrainsMono Nerd Font:size=17
+font-bold=JetBrainsMono Nerd Font:style=Bold:size=17
+font-italic=JetBrainsMono Nerd Font:style=Italic:size=17
+font-bold-italic=JetBrainsMono Nerd Font:style=Bold Italic:size=17
+
+[colors-dark]
+background=1a1a1a
+alpha=0.7
+
+[tweak]
+font-monospace-warn=no

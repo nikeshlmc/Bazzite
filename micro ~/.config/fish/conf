@@ -1,0 +1,85 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 0,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "exclusive": true,
+    "modules-left": [
+        "custom/launcher",
+        "sway/workspaces",
+        "mpris",
+        "clock#date"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "custom/brightness",
+        "pulseaudio",
+        "network",
+        "battery"
+    ],
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "bash /home/nikesh/.config/waybar/apps-menu.sh",
+        "tooltip": false
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "all-outputs": true,
+        "disable-scroll": false,
+        "tooltip": false,
+        "persistent-workspaces": {}
+    },
+    "mpris": {
+        "format": "⏺  {artist} — {title}",
+        "format-paused": "▶  {artist} — {title}",
+        "max-length": 15,
+        "tooltip": false
+    },
+    "clock#date": {
+        "format": "{:%b %d, %a}",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip": false
+    },
+    "custom/brightness": {
+        "format": "<span size='x-large'>☀</span><span rise='2000'> {}%</span>",
+        "exec": "brightnessctl get | awk -v max=$(brightnessctl max) '{printf \"%d\", $1/max*100}'",
+        "interval": 1,
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%- --min-value=1",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  {volume}%",
+        "format-icons": {
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "default": ["󰕾"]
+        }
+    },
+    "network": {
+        "format-wifi": "󰤨    {essid}",
+        "format-ethernet": "󰈀 wired",
+        "format-disconnected": "󰤭   Arch",
+        "tooltip": false
+    },
+    "battery": {
+        "interval": 1,
+        "format": "<span size='x-large'> </span><span rise='2000'>  {capacity}%</span>",
+        "format-charging": "󱐋 {capacity} %",
+        "format-plugged": " {capacity}%",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": false
+    }
+}
